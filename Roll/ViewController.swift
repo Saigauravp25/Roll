@@ -185,7 +185,7 @@ class ViewController: UIViewController {
     func movePillarTop(yPos: CGFloat, pillarNumber: Int) -> Void {
         if pillarBelowMiddle(y: yPos) {
             let numOfPillars = PillarCollection.count
-            print(pillarNumber)
+            //print(pillarNumber)
             for indexOfPillarTop in 0..<PillarTopCollection.count {
                     let newIndex = (pillarNumber + (numOfPillars + indexOfPillarTop - 3)) % numOfPillars
                     PillarTopFromLeftConstraints[indexOfPillarTop].constant = PillarFromLeftConstraints[newIndex].constant
