@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //arrays of IBOutlets for Pillars
     @IBOutlet var PillarCollection: [UIImageView]!
     @IBOutlet var PillarTopCollection: [UIImageView]!
     @IBOutlet var PillarFromLeftConstraints: [NSLayoutConstraint]!
@@ -17,9 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet var PillarTopFromLeftConstraints: [NSLayoutConstraint]!
     @IBOutlet var PillarTopFromTopConstraints: [NSLayoutConstraint]!
     
+    //IBOutlets for Ball
     @IBOutlet weak var BallFromLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var BallFromTopConstraint: NSLayoutConstraint!
     
+    //IBOutlets for various views, buttons, or labels
     @IBOutlet var GameView: UIView!
     @IBOutlet weak var Ball: UIImageView!
     @IBOutlet weak var GameOver: UIImageView!
@@ -31,13 +34,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var ScoreOnBoard: UILabel!
     @IBOutlet weak var ScoreLabel: UILabel!
     
+    //variables for mechanics of games
     var timer = Timer()
     var ballTimer = Timer()
     var tapsValid: Bool?
     var ballRight: Bool?
     var acceleration: Double = 1
     var startingBuffer: Int = 5
-    
     var score: Int = 0
     var highScore: Int = 0
     let defaults: UserDefaults = UserDefaults.standard
